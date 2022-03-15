@@ -1,0 +1,76 @@
+GIT
+
+Install GIT
+https://git-scm.com/download/win
+	Selecionar a versão compativel com o Sistema Operacional
+	Instalar normalmente...
+	
+Configurando o GIT
+definir o nome
+$ git config --global user.name "Emerson Carlos"
+
+definir o email
+$ git config --global user.email "emersonn.carlos@gmail.com"
+
+definir o editor padrao
+$ git config --glogal core.editor VSCode
+
+Para listar as informacoes da variavel:
+$ git config user.name
+
+Mostrar tudo que esta salvo
+$ git config --list
+
+
+Acessar a pasta onde vai estar os arquivos a aplicação, no DOS
+C:\xampp\htdocs\modulogit
+
+inicializar o repositorio
+git init
+
+Dentro da pasta modulogit, criar um arquivo chamado README.md
+
+no terminal, listar o estado do GIT
+$ git status
+
+Ao encontrar os arquivos, basta adicionar ao trackeamento...
+$ git add README.md teste.txt {adiciona arquivo um por um}
+$ git add -A {adiciona todos os arquivos untracked}
+
+fazer commit
+$ git commit -m "Primeiro commit"
+
+mostrar a lista de auteração que foram feitas...
+git log
+
+mostra a lista das branchs que tem naquele projeto, e com asteriscos indica qual esta selecionado.
+git branch
+
+Commitar e inserir o arquivo ao monitoramento (Tracked) {-am}
+git commit -am "Terceiro Commit"
+
+Revertendo modificações..
+--soft (mais recomendado) volta os arquivos antes do ultimo commit;
+--mixed volta o commit bem como a ultima alteracao, sendo necessario enviar os arquivos novamente.
+--hard, volta o estado e apaga todo o conteudo da pasta.
+35ae31d05584ca508885d33a1b34d237cf59e503 é o id da alteracao que deseja reverter
+$ git reset --hard 35ae31d05584ca508885d33a1b34d237cf59e503
+
+Criando um novo branch
+$ git branch teste
+
+Trocar de branch
+git checkout teste
+
+Mostrar o que foi alterado dentro do arquivo.
+$ git diff 
+
+Mostrar somente o nome do arquivo que sofreu alteraçao
+$ git diff --name-only
+
+Saber o que foi alterado somente no arquivo desejado
+$ git diff index.html
+
+
+Generating a New SSH key
+$ ssh-keygen -t rsa -b 4096 -C "emersonn.carlos@gmail.com"
