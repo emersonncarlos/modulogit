@@ -1,1 +1,1 @@
-arquivo novo testendo;
+console;
